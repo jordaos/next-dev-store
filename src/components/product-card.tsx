@@ -2,6 +2,7 @@ import { Product } from '@/data/types/product'
 import { Tag } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { AddToCartButton } from './add-to-cart-button'
 
 interface ProductCardProps {
   product: Product
@@ -21,6 +22,12 @@ export function ProductCard({ product, size = 3 }: ProductCardProps) {
         height={920}
         quality={100}
         alt=""
+      />
+
+      <AddToCartButton
+        productId={product.id}
+        isFabButton={true}
+        className="absolute -bottom-12 right-4 shadow-md group-hover:bottom-2"
       />
 
       <div className="hidden group-hover:flex absolute top-4 right-4 h-12 items-center gap-2 max-w-[280px] rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
