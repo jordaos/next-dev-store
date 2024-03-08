@@ -14,6 +14,9 @@ const config: Config = {
       gridTemplateRows: {
         app: 'min-content max-content',
       },
+      spacing: {
+        content: '1600px',
+      },
     },
   },
   plugins: [],

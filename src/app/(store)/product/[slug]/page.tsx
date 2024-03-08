@@ -33,6 +33,7 @@ export async function generateMetadata({
   }
 }
 
+// Gerar cache dessa página com os parametros passados por essa função
 export async function generateStaticParams() {
   const response = await api('/products/featured')
   const products: Product[] = await response.json()
@@ -46,7 +47,7 @@ export default async function ProductPage({ params }: ProductProps) {
   const product = await getProduct(params.slug)
 
   return (
-    <div className="relative grid max-h-[860px] grid-cols-3">
+    <div className="relative grid grid-cols-3">
       <div className="col-span-2 overflow-hidden">
         <Image
           src={product.image}
@@ -65,7 +66,7 @@ export default async function ProductPage({ params }: ProductProps) {
         </p>
 
         <div className="mt-8 flex items-center gap-3">
-          <span className="inline-block rounded-full bg-violet-500 px-5 py-2.5 font-semibold">
+          <span className="inline-block rounded-full bg-violet-500 px-5 py-2.5 font-semibold select-none">
             {product.price.toLocaleString('pt-BR', {
               style: 'currency',
               currency: 'BRL',
@@ -88,25 +89,25 @@ export default async function ProductPage({ params }: ProductProps) {
           <div className="flex gap-2">
             <button
               type="button"
-              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold"
+              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold hover:bg-zinc-700 transition-all active:bg-zinc-600"
             >
               P
             </button>
             <button
               type="button"
-              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold"
+              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold hover:bg-zinc-700 transition-all active:bg-zinc-600"
             >
               M
             </button>
             <button
               type="button"
-              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold"
+              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold hover:bg-zinc-700 transition-all active:bg-zinc-600"
             >
               G
             </button>
             <button
               type="button"
-              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold"
+              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold hover:bg-zinc-700 transition-all active:bg-zinc-600"
             >
               GG
             </button>
