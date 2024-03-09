@@ -25,7 +25,7 @@ export function ProductCard({ product, size = 3 }: ProductCardProps) {
       />
 
       <AddToCartButton
-        productId={product.id}
+        product={product}
         isFabButton={true}
         className="absolute -bottom-12 right-4 shadow-md group-hover:bottom-2"
       />

@@ -1,18 +1,19 @@
 'use client'
 
 import { useCart } from '@/contexts/cart-context'
+import { Product } from '@/data/types/product'
 import { ShoppingCart } from 'lucide-react'
 import { MouseEvent } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 export interface AddToCartButtonProps {
-  productId: number
+  product: Product
   isFabButton?: boolean
   className?: string
 }
 
 export function AddToCartButton({
-  productId,
+  product,
   isFabButton = false,
   className = '',
 }: AddToCartButtonProps) {
@@ -21,7 +22,7 @@ export function AddToCartButton({
   function handleAddProductToCart(event: MouseEvent<HTMLButtonElement>) {
     event.preventDefault()
 
-    addToCart(productId)
+    addToCart(product)
   }
 
   return (

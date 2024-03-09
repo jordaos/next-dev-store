@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Suspense } from 'react'
 
-import { CartWidget } from './cart-widget'
+import { CartWidget } from './cart/cart-widget'
 import { SearchForm } from './search-form'
 
 export function Header() {
