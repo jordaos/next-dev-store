@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge'
 
-import { CartItem } from '@/contexts/cart-context'
 import { CartItemComponent } from './cart-item-component'
+import { CartItem } from '@/store/cart'
 
 interface CartListProps {
   className?: string

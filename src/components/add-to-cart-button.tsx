@@ -1,7 +1,7 @@
 'use client'
 
-import { useCart } from '@/contexts/cart-context'
 import { Product } from '@/data/types/product'
+import { useCartStore } from '@/store/cart'
 import { ShoppingCart } from 'lucide-react'
 import { MouseEvent } from 'react'
 import { twMerge } from 'tailwind-merge'
@@ -17,7 +17,7 @@ export function AddToCartButton({
   isFabButton = false,
   className = '',
 }: AddToCartButtonProps) {
-  const { addToCart } = useCart()
+  const { add: addToCart } = useCartStore()
 
   function handleAddProductToCart(event: MouseEvent<HTMLButtonElement>) {
     event.preventDefault()

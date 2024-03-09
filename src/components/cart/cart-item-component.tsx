@@ -1,4 +1,4 @@
-import { CartItem, useCart } from '@/contexts/cart-context'
+import { CartItem, useCartStore } from '@/store/cart'
 import { Trash } from 'lucide-react'
 import Image from 'next/image'
 
@@ -9,7 +9,7 @@ interface CardItemProps {
 export function CartItemComponent({
   cartItem: { product, quantity },
 }: CardItemProps) {
-  const { removeProductCart } = useCart()
+  const { remove: removeProductCart } = useCartStore()
 
   return (
     <div className="flex items-center p-2 ps-0 hover:bg-zinc-700">
