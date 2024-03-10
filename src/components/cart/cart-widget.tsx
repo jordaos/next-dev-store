@@ -9,7 +9,7 @@ export function CartWidget() {
   const { cart } = useCartStore()
 
   return (
-    <div className="group flex items-center gap-2 relative">
+    <div className="group flex items-center gap-2 relative hover:underline">
       <ShoppingBag className="h-4 w-4" />
       <span className="text-sm">Cart ({cart.length})</span>
 
