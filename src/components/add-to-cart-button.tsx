@@ -29,6 +29,7 @@ export function AddToCartButton({
     <button
       type="button"
       onClick={(ev) => handleAddProductToCart(ev)}
+      data-test="add-to-cart-button"
       className={twMerge(
         `mt-8 flex h-12 ${isFabButton ? 'w-12' : ''} gap-2 items-center justify-center rounded-full bg-emerald-600 font-semibold text-white hover:bg-emerald-700 active:bg-emerald-800 transition-all`,
         className,

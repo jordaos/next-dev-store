@@ -14,6 +14,7 @@ export function ProductCard({ product, size = 3 }: ProductCardProps) {
     <Link
       href={`/product/${product.slug}`}
       className={`group relative col-span-${size} row-span-${size} rounded-lg bg-zinc-900 overflow-hidden flex justify-center items-end`}
+      data-test="product-card"
     >
       <Image
         src={product.image}

@@ -27,7 +27,8 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "types": ["cypress", "node", "cypress-real-events"]
   },
   "include": [
     "next-env.d.ts",
